@@ -1,0 +1,22 @@
+[project]
+name = "ohio-crime-data-etl"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ramin Hassani", email = "raminrst999@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "db-dtypes>=1.7.2",
+    "google-cloud-bigquery>=3.46.1",
+    "polars>=2.0.0",
+    "pyarrow>=26.0.0",
+]
+
+[project.scripts]
+ohio-crime-data-etl = "ohio_crime_data_etl:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
